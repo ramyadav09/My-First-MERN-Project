@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
 const connectDB = async () => {
   try {
-    await mongoose.connect(
-      "mongodb+srv://ramyadav2060:VAbZSokTAeajG2j3@nodejs.a67pm45.mongodb.net/devTinder"
-    );
+    await mongoose.connect(process.env.DB_CONNECTION_STRING);
   } catch (err) {
     console.log(err);
   }

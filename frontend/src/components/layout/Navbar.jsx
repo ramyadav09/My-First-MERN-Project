@@ -43,7 +43,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <Link to={"/"}>
               {" "}
-              <h1 className="m-0 text-3xl cursor-pointer font-extrabold tracking-wide drop-shadow-md">
+              <h1 className="m-0 lg:text-3xl text-md cursor-pointer font-extrabold tracking-wide drop-shadow-md">
                 DevTinder
               </h1>
             </Link>
