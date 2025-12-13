@@ -59,6 +59,10 @@ const userSchema = new Schema(
       type: [String],
       maxlength: 100,
     },
+    skills: {
+      type: [String],
+      maxlength: 100,
+    },
   },
   {
     timestamps: true,
@@ -67,7 +71,7 @@ const userSchema = new Schema(
 
 userSchema.methods.getJWT = async function () {
   const user = this;
-  const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
+  const token = jwt.sign({ _id: user._id }, "mad@Louis$1", {
     expiresIn: "1d",
   });
   return token;
