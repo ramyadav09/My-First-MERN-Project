@@ -15,9 +15,8 @@ paymentRouter.post("/create-payment", userAuth, async (req, res) => {
     }
     const { firstName, lastName, email } = req.user;
     const order = await rzpInstance.orders.create({
-      amount: amount,
-      method: "netbanking",
-      receipt: "BILL13375649", // receipt id
+      amount: amount * 100,
+      receipt: `rcpt_${Date.now()}`,
       currency: "INR",
       notes: {
         // for your reference

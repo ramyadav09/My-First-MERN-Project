@@ -1,6 +1,6 @@
+require("dotenv").config();
 const express = require("express");
 const connectDB = require("./config/database");
-const app = express();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const http = require("http");
@@ -12,7 +12,8 @@ const initializeSocket = require("./utils/socket");
 const chatRouter = require("./routes/chat");
 const paymentRouter = require("./routes/payment");
 
-require("dotenv").config();
+const app = express();
+
 app.use(
   cors({
     origin: "http://localhost:5173" || "http://localhost:8081",
