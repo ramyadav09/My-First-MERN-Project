@@ -36,6 +36,7 @@ app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", userRouter);
 app.use("/", chatRouter);
+app.use("/payment-webhook", express.raw({ type: "application/json" }));
 app.use("/", paymentRouter);
 connectDB()
   .then(() => {
