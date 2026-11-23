@@ -10,6 +10,13 @@ import Request from "./components/connections/Request";
 import Messenger from "./components/messenger/Messenger";
 import Premium from "./components/premium/Premium";
 import NavbarPage from "./pages/Navbar";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Pricing from "./pages/Pricing";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import RefundPolicy from "./pages/RefundPolicy";
+import ShippingPolicy from "./pages/ShippingPolicy";
 function App() {
   return (
     <>
@@ -17,6 +24,13 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<Auth />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/shipping-policy" element={<ShippingPolicy />} />
             <Route element={<Body />}>
               <Route index element={<Feed />} />
               <Route path="/navbar" element={<NavbarPage />} />

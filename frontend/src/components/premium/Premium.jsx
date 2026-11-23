@@ -7,7 +7,7 @@ const plans = [
   {
     name: "Plus",
     icon: <FiZap size={28} className="text-violet-400" />,
-    price: { monthly: 9, yearly: 79 },
+    price: { monthly: 100, yearly: 999 },
     color: "from-violet-600/20 to-violet-900/20",
     border: "border-violet-500/40",
     badge: null,
@@ -23,7 +23,7 @@ const plans = [
   {
     name: "Premium",
     icon: <FiAward size={28} className="text-yellow-400" />,
-    price: { monthly: 19, yearly: 149 },
+    price: { monthly: 300, yearly: 2999 },
     color: "from-yellow-500/20 to-orange-700/20",
     border: "border-yellow-400/60",
     badge: "Most Popular",
@@ -40,7 +40,7 @@ const plans = [
   {
     name: "Pro",
     icon: <FiSend size={28} className="text-pink-400" />,
-    price: { monthly: 29, yearly: 229 },
+    price: { monthly: 200, yearly: 1999 },
     color: "from-pink-600/20 to-purple-900/20",
     border: "border-pink-500/40",
     badge: null,
@@ -166,7 +166,7 @@ export default function Premium() {
 
             <div className="mb-6">
               <span className="text-4xl font-extrabold text-white">
-                ${plan.price[billing]}
+                ₹{plan.price[billing]}
               </span>
               <span className="text-white/40 ml-1 text-sm">
                 /{billing === "monthly" ? "mo" : "yr"}
