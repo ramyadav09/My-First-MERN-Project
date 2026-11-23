@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaBolt, FaAward, FaPaperPlane, FaClock, FaInfinity } from "react-icons/fa";
+import { FiHeart, FiZap, FiAward, FiSend, FaClock, FaInfinity } from "react-icons/fi";
 import Footer from "../components/layout/Footer";
 
 const BRAND_NAME = "Dev Tinder";
@@ -7,7 +7,7 @@ const BRAND_NAME = "Dev Tinder";
 const plans = [
   {
     name: "Plus",
-    icon: <FaBolt size={28} className="text-violet-400" />,
+    icon: <FiZap size={28} className="text-violet-400" />,
     price: 100,
     interval: "/mo",
     features: [
@@ -17,11 +17,11 @@ const plans = [
       "Rewind last swipe",
       "Ad-free experience",
     ],
-    description: "Perfect for getting started with premium features.",
+    description: "Perfect for getting started with premium dating features.",
   },
   {
     name: "Premium",
-    icon: <FaAward size={28} className="text-yellow-400" />,
+    icon: <FiAward size={28} className="text-yellow-400" />,
     price: 300,
     interval: "/mo",
     features: [
@@ -32,12 +32,12 @@ const plans = [
       "Profile boost × 3/month",
       "Advanced filters",
     ],
-    description: "Our most popular plan for serious learners.",
+    description: "Our most popular plan for serious daters.",
     popular: true,
   },
   {
     name: "Pro",
-    icon: <FaPaperPlane size={28} className="text-pink-400" />,
+    icon: <FiSend size={28} className="text-pink-400" />,
     price: 200,
     interval: "/mo",
     features: [
@@ -60,7 +60,7 @@ export default function Pricing() {
           Simple, Transparent Pricing
         </h1>
         <p className="text-white/60 text-lg leading-relaxed max-w-2xl mx-auto">
-          Choose the plan that fits your learning goals. All prices are in
+          Choose the plan that fits your dating goals. All prices are in
           Indian Rupees (₹) and billed through Razorpay. Cancel anytime.
         </p>
       </section>

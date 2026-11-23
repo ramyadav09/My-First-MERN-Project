@@ -34,9 +34,9 @@ export default function Footer() {
               </h1>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              {BRAND_NAME} is an education and e-learning platform that helps
-              learners connect, grow, and access premium courses through a
-              simple, secure online experience.
+              {BRAND_NAME} is an online dating platform that helps people
+              connect, match, and build meaningful relationships through a
+              simple, secure experience.
             </p>
             <div className="flex gap-4">
               <a

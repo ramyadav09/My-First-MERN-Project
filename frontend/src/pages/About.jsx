@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaUserGraduate, FaPlayCircle, FaGlobe, FaUsers, FaLightbulb } from "react-icons/fa";
+import { FaHeart, FaUsers, FaLightbulb } from "react-icons/fa";
 import Footer from "../components/layout/Footer";
 
 const BRAND_NAME = "Dev Tinder";
@@ -13,9 +13,9 @@ export default function About() {
             About {BRAND_NAME}
           </h1>
           <p className="text-white/60 text-lg leading-relaxed mb-8">
-            {BRAND_NAME} is an education and e-learning platform built to help
-            learners connect with the right courses, track their progress, and
-            unlock premium learning experiences — all in one place.
+            {BRAND_NAME} is an online dating platform built to help people
+            connect with the right matches, build meaningful conversations,
+            and find lasting relationships — all in one place.
           </p>
         </div>
       </section>
@@ -23,29 +23,29 @@ export default function About() {
       <section className="px-6 py-16 border-y border-white/5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
-            <FaUserGraduate className="w-10 h-10 text-purple-400 mb-4" />
+            <FaHeart className="w-10 h-10 text-purple-400 mb-4" />
             <h3 className="text-xl font-bold mb-3">Who it is for</h3>
             <p className="text-white/60 text-sm leading-relaxed">
-              Students, professionals, and lifelong learners who want to
-              upgrade their skills through structured, instructor-led courses
-              and self-paced learning modules.
+              Singles looking for genuine connections, meaningful
+              conversations, and long-term relationships through a safe and
+              verified dating experience.
             </p>
           </div>
           <div className="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
-            <FaPlayCircle className="w-10 h-10 text-purple-400 mb-4" />
+            <FaUsers className="w-10 h-10 text-purple-400 mb-4" />
             <h3 className="text-xl font-bold mb-3">How it works</h3>
             <p className="text-white/60 text-sm leading-relaxed">
-              Browse available courses, select a plan that fits your goals,
-              complete the secure payment via Razorpay, and get instant access
-              to your learning dashboard.
+              Create your profile, swipe through matches, connect with people
+              you like, and upgrade to a premium plan for unlimited likes and
+              priority visibility.
             </p>
           </div>
           <div className="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
             <FaLightbulb className="w-10 h-10 text-purple-400 mb-4" />
             <h3 className="text-xl font-bold mb-3">What you get</h3>
             <p className="text-white/60 text-sm leading-relaxed">
-              Unlimited access to enrolled courses, progress tracking,
-              completion certificates, and priority support for premium
+              Unlimited swipes, see who liked you, rewind your last swipe,
+              ad-free experience, and priority in the match queue for premium
               subscribers.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function About() {
 
       <section className="px-6 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center">Ready to start learning?</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">Ready to find your match?</h2>
           <div className="flex justify-center">
             <Link
               to="/pricing"

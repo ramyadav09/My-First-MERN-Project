@@ -18,26 +18,27 @@ export default function RefundPolicy() {
           <div className="bg-white/5 border border-white/10 rounded-xl p-8 backdrop-blur-sm leading-relaxed text-white/80">
             <p className="mb-6">
               This Refund & Cancellation Policy applies to all purchases made
-              on <strong>{BRAND_NAME}</strong>, including course enrollments
-              and subscription plans. Payments are processed through Razorpay
-              in Indian Rupees (₹).
+              on <strong>{BRAND_NAME}</strong>, including premium subscription
+              plans. Payments are processed through Razorpay in Indian Rupees
+              (₹).
             </p>
 
             <h2 className="text-xl font-bold mt-8 mb-4 text-white">1. Cancellation</h2>
             <p className="mb-6">
-              You may cancel your subscription at any time from your account
-              settings. Cancellation takes effect at the end of your current
-              billing period. You will continue to have access to your
-              enrolled courses until the end of that period.
+              You may cancel your premium subscription at any time from your
+              account settings. Cancellation takes effect at the end of your
+              current billing period. You will continue to have access to
+              premium features until the end of that period.
             </p>
 
             <h2 className="text-xl font-bold mt-8 mb-4 text-white">2. Refund Eligibility</h2>
             <p className="mb-6">
               Refunds are considered within <strong>7 days</strong> of the
-              original purchase date, provided the course content has not been
-              accessed or downloaded. Once you access or begin a course, the
-              purchase is considered consumed and is not eligible for a refund
-              because digital content cannot be returned.
+              original purchase date, provided the premium features have not
+              been used. Once you use premium features (such as unlimited
+              swipes, profile boost, or advanced filters), the purchase is
+              considered consumed and is not eligible for a refund because
+              digital services cannot be returned.
             </p>
 
             <h2 className="text-xl font-bold mt-8 mb-4 text-white">3. Non-Refundable Items</h2>
@@ -45,7 +46,7 @@ export default function RefundPolicy() {
               The following are non-refundable:
             </p>
             <ul className="list-disc list-inside mb-6 space-y-2 text-white/80">
-              <li>Courses or content that have been accessed, viewed, or downloaded</li>
+              <li>Premium features that have been accessed or used</li>
               <li>Subscription fees for periods already consumed</li>
               <li>Promotional or discounted purchases marked as final sale</li>
             </ul>

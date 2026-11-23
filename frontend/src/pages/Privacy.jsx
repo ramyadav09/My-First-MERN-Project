@@ -20,8 +20,8 @@ export default function Privacy() {
             <p className="mb-6">
               This Privacy Policy explains how <strong>{BRAND_NAME}</strong>
               ("we", "us", "our") collects, uses, and protects your personal
-              information when you use our Platform. We are operated by
-              <strong>{OWNER_NAME}</strong>, located at
+              information when you use our online dating Platform. We are
+              operated by <strong>{OWNER_NAME}</strong>, located at
               <strong>{ADDRESS}</strong>.
             </p>
 
@@ -33,9 +33,10 @@ export default function Privacy() {
             <ul className="list-disc list-inside mb-6 space-y-2 text-white/80">
               <li>Full name</li>
               <li>Email address</li>
-              <li>Profile photo (optional)</li>
+              <li>Profile photo and dating preferences</li>
+              <li>Gender, age, and location</li>
               <li>Payment details (processed by Razorpay)</li>
-              <li>Usage data and course enrollment history</li>
+              <li>Usage data, matches, and chat history</li>
             </ul>
 
             <h2 className="text-xl font-bold mt-8 mb-4 text-white">2. How We Use Your Information</h2>
@@ -43,9 +44,10 @@ export default function Privacy() {
               We use your information to:
             </p>
             <ul className="list-disc list-inside mb-6 space-y-2 text-white/80">
-              <li>Create and manage your account</li>
-              <li>Process course enrollments and payments</li>
-              <li>Provide access to learning content</li>
+              <li>Create and manage your dating profile</li>
+              <li>Suggest compatible matches</li>
+              <li>Process premium subscription payments</li>
+              <li>Enable chat and messaging between matched users</li>
               <li>Send service-related communications</li>
               <li>Improve the Platform and user experience</li>
             </ul>
@@ -75,6 +77,7 @@ export default function Privacy() {
             </p>
             <ul className="list-disc list-inside mb-6 space-y-2 text-white/80">
               <li>Razorpay, for the sole purpose of processing payments</li>
+              <li>Other users, limited to the profile information you choose to display</li>
               <li>Service providers who help us operate the Platform</li>
               <li>Legal authorities, when required by law</li>
             </ul>

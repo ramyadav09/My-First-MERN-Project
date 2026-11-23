@@ -16,7 +16,7 @@ export default function Contact() {
             Contact Us
           </h1>
           <p className="text-white/60 text-lg leading-relaxed">
-            Have questions about {BRAND_NAME}, our courses, or your account?
+            Have questions about {BRAND_NAME}, your matches, or your account?
             Reach out to us and we will get back to you as soon as possible.
           </p>
         </div>
