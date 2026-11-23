@@ -21,8 +21,8 @@ const plans = [
     description: "Perfect for getting started with premium dating features.",
   },
   {
-    name: "Premium",
-    icon: <FiAward size={28} className="text-yellow-400" />,
+    name: "Pro",
+    icon: <FiSend size={28} className="text-pink-400" />,
     price: 200,
     interval: "/mo",
     features: [
@@ -33,23 +33,23 @@ const plans = [
       "Profile boost × 3/month",
       "Advanced filters",
     ],
-    description: "Our most popular plan for serious daters.",
-    popular: true,
+    description: "For serious daters who want more visibility.",
   },
   {
-    name: "Pro",
-    icon: <FiSend size={28} className="text-pink-400" />,
+    name: "Premium",
+    icon: <FiAward size={28} className="text-yellow-400" />,
     price: 300,
     interval: "/mo",
     features: [
-      "Everything in Premium",
+      "Everything in Pro",
       "Incognito mode",
       "See all profile visitors",
       "Unlimited profile boosts",
       "Dedicated support",
       "Early access to features",
     ],
-    description: "For power users who want complete access.",
+    description: "Our most popular plan for power users.",
+    popular: true,
   },
 ];
 

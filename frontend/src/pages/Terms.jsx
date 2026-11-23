@@ -63,8 +63,7 @@ export default function Terms() {
             <p className="mb-6">
               You agree to use the Platform responsibly and respectfully. We
               prohibit harassment, hate speech, bullying, fake profiles, and
-              any behavior that makes other users feel unsafe. {BRAND_NAME}
-              reserves the right to review, moderate, and remove any profile,
+              any behavior that makes other users feel unsafe. {BRAND_NAME} reserves the right to review, moderate, and remove any profile,
               photo, or message that violates these standards. Repeated
               violations may result in permanent account suspension.
             </p>
