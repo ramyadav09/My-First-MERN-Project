@@ -84,7 +84,7 @@ paymentRouter.post("/payment-webhook", async (req, res) => {
     if (user) {
       if (event === "payment.captured") {
         user.isPremium = true;
-        user.membershipType = payment.notes.membershipType;
+        user.membershipType = payment.notes?.membershipType || "plus";
         user.membershipExpiry = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
         await user.save();
       } else if (event === "payment.failed") {

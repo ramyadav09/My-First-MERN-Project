@@ -30,6 +30,9 @@ const paymentSchema = new mongoose.Schema(
     signature: {
       type: String,
     },
+    notes: {
+      type: mongoose.Schema.Types.Mixed,
+    },
 
   },
   { timestamps: true },
