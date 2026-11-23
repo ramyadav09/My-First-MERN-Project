@@ -3,30 +3,38 @@ const connectDB = require("./config/database");
 const app = express();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-require("dotenv").config();
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
-app.use(cookieParser());
-app.use(express.json()); //converts the data into js object
-
+const http = require("http");
 const authRouter = require("./routes/auth");
 const profileRouter = require("./routes/profile");
 const requestRouter = require("./routes/request");
 const userRouter = require("./routes/user");
+const initializeSocket = require("./utils/socket");
+const chatRouter = require("./routes/chat");
+
+require("dotenv").config();
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
+);
+const server = http.createServer(app);
+app.use(cookieParser());
+app.use(express.json()); //converts the data into js object
+initializeSocket(server);
 
 app.use("/", authRouter);
 app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", userRouter);
+app.use("/", chatRouter);
 
 connectDB()
   .then(() => {
     console.log("Connected to MongoDB");
-    app.listen(3000, () => {
+    server.listen(3000, () => {
       console.log("Server running on port 3000");
     });
   })

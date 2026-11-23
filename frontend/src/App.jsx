@@ -20,6 +20,8 @@ function App() {
               <Route path="/edit" element={<EditProfile />} />
               <Route path="/requests" element={<Request />} />
               <Route path="/messages" element={<Messenger />} />
+              <Route path="/messages/:targetUserId" element={<Messenger />} />
+
               <Route path="/login" element={<Auth />} />
             </Route>
           </Routes>

@@ -28,7 +28,7 @@ const Feed = () => {
       console.error("Error : " + err);
     }
   };
-  
+
   useEffect(() => {
     userFeed(page, limit);
   }, [page, limit]);
@@ -48,7 +48,7 @@ const Feed = () => {
 
   if (!feed || feed.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 flex items-center justify-center">
+      <div className="flex items-center justify-center p-6 mt-10">
         <div className="text-center">
           <div className="text-white text-2xl font-bold mb-2">
             No more profiles to show!
@@ -68,7 +68,7 @@ const Feed = () => {
 
   if (currentIndex >= feed.length) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 flex items-center justify-center">
+      <div className="flex items-center justify-center p-6 mt-10">
         <div className="text-center">
           <div className="text-white text-2xl font-bold mb-4">
             You've seen all profiles on page {page}!
@@ -86,7 +86,7 @@ const Feed = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 p-6">
+    <div className="p-6">
       <UserCard currentUser={feed[currentIndex]} onRequest={handleRequest} />
     </div>
   );

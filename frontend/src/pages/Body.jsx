@@ -20,7 +20,6 @@ const Body = () => {
         const res = await axios.get(`${BASE_URL}/profile/view`, {
           withCredentials: true,
         });
-
         if (!isMounted) return;
 
         dispatch(addUser(res.data));

@@ -24,7 +24,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 p-6">
+    <div className="p-6">
       <div className="max-w-2xl mx-auto">
         <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-8 text-white">
           <div className="text-center mb-8">
