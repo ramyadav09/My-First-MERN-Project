@@ -28,6 +28,7 @@ app.use(
 );
 const server = http.createServer(app);
 app.use(cookieParser());
+app.use("/payment-webhook", express.raw({ type: "application/json" }));
 app.use(express.json()); //converts the data into js object
 initializeSocket(server);
 
@@ -36,7 +37,6 @@ app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", userRouter);
 app.use("/", chatRouter);
-app.use("/payment-webhook", express.raw({ type: "application/json" }));
 app.use("/", paymentRouter);
 connectDB()
   .then(() => {
