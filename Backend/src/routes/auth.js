@@ -38,8 +38,15 @@ authRouter.post("/login", async (req, res) => {
         //generating jwt token
         const token = await user.getJWT();
 
+        const isProduction = process.env.NODE_ENV === "production";
+        const cookieOptions = {
+          httpOnly: true,
+          secure: isProduction,
+          sameSite: isProduction ? "none" : "lax",
+        };
+
         //adding token to user
-        res.cookie("token", token);
+        res.cookie("token", token, cookieOptions);
         res.send(user);
       } else {
         throw new Error("Password is incorrect");
@@ -51,7 +58,12 @@ authRouter.post("/login", async (req, res) => {
 });
 
 authRouter.post("/logout", async (req, res) => {
-  res.clearCookie("token");
+  const isProduction = process.env.NODE_ENV === "production";
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: isProduction,
+    sameSite: isProduction ? "none" : "lax",
+  });
   res.send("Logout Successful!!");
 });
 

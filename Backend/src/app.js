@@ -19,8 +19,8 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:8081",
-      "https://my-first-mern-project-lcns-frontend.vercel.app",
-    ],
+      process.env.FRONTEND_URL,
+    ].filter(Boolean),
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
