@@ -28,8 +28,13 @@ app.use(
 );
 const server = http.createServer(app);
 app.use(cookieParser());
-app.use("/payment-webhook", express.raw({ type: "application/json" }));
-app.use(express.json()); //converts the data into js object
+app.use(
+  express.json({
+    verify: (req, res, buf) => {
+      req.rawBody = buf.toString("utf8");
+    },
+  }),
+); //converts the data into js object
 initializeSocket(server);
 
 app.use("/", authRouter);

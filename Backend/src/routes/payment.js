@@ -55,42 +55,46 @@ paymentRouter.post("/create-payment", userAuth, async (req, res) => {
 
 paymentRouter.post("/payment-webhook", async (req, res) => {
   try {
-    const isvalidateWebhookSignature = validateWebhookSignature(
-      JSON.stringify(req.body),
+    const isValid = validateWebhookSignature(
+      req.rawBody,
       req.headers["x-razorpay-signature"],
       process.env.WEBHOOK_SECRET,
     );
-    if (!isvalidateWebhookSignature) {
+    if (!isValid) {
       return res.status(400).send("Invalid signature");
     }
-    console.log("Webhook event received:", req.body.event);
-    //update payment status in database
-    const payment = await Payment.findOne({
-      orderId: req.body.payload.payment.entity.order_id,
-    });
+
+    const event = req.body.event;
+    if (event !== "payment.captured" && event !== "payment.failed") {
+      return res.status(200).json({ msg: "Event ignored" });
+    }
+
+    const paymentEntity = req.body.payload?.payment?.entity;
+    const payment = await Payment.findOne({ orderId: paymentEntity?.order_id });
     if (!payment) {
       return res.status(404).send("Payment not found");
     }
-    payment.status = req.body.payload.payment.entity.status;
+
+    payment.status = paymentEntity.status;
     await payment.save();
 
-    //update premium status in user model
     const user = await User.findById(payment.userId);
-
-    if (req.body.event === "payment.captured") {
-      user.isPremium = true;
-      user.membershipType = payment.notes.membershipType;
-      user.membershipExpiry = new Date() + 30 * 24 * 60 * 60 * 1000; // Set membership expiry to 30 days from now
-      await user.save();
-    }
-    if (req.body.event === "payment.failed") {
-      user.isPremium = false;
-      await user.save();
+    if (user) {
+      if (event === "payment.captured") {
+        user.isPremium = true;
+        user.membershipType = payment.notes.membershipType;
+        user.membershipExpiry = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
+        await user.save();
+      } else if (event === "payment.failed") {
+        user.isPremium = false;
+        await user.save();
+      }
     }
 
     return res.status(200).json({ msg: "Webhook processed successfully" });
   } catch (err) {
-    res.status(400).send(err.message);
+    console.error("Webhook error:", err);
+    return res.status(400).send(err.message);
   }
 });
 
