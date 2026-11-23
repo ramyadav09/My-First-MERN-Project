@@ -122,7 +122,7 @@ export default function Terms() {
             <h2 className="text-xl font-bold mt-8 mb-4 text-white">11. Contact</h2>
             <p className="mb-0">
               If you have questions about these Terms, please contact us at
-              rkramyadav2060@gmail.com.
+              rkramyadav2063@gmail.com.
             </p>
           </div>
         </div>

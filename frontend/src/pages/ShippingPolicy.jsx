@@ -59,7 +59,7 @@ export default function ShippingPolicy() {
             <h2 className="text-xl font-bold mt-8 mb-4 text-white">5. Contact</h2>
             <p className="mb-0">
               For questions about premium access or digital delivery, contact
-              us at rkramyadav2060@gmail.com or write to us at
+              us at rkramyadav2063@gmail.com or write to us at
               {ADDRESS}.
             </p>
           </div>

@@ -2,7 +2,7 @@ import Footer from "../components/layout/Footer";
 
 const BRAND_NAME = "Dev Tinder";
 const OWNER_NAME = "Ram Kumar Yadav";
-const SUPPORT_EMAIL = "rkramyadav2060@gmail.com";
+const SUPPORT_EMAIL = "rkramyadav2063@gmail.com";
 const ADDRESS = "Bhubaneshwar, Odisha, India";
 
 export default function Privacy() {
@@ -18,8 +18,7 @@ export default function Privacy() {
           </p>
           <div className="bg-white/5 border border-white/10 rounded-xl p-8 backdrop-blur-sm leading-relaxed text-white/80">
             <p className="mb-6">
-              This Privacy Policy explains how <strong>{BRAND_NAME}</strong>
-              ("we", "us", "our") collects, uses, and protects your personal
+              This Privacy Policy explains how <strong>{BRAND_NAME}</strong> ("we", "us", "our") collects, uses, and protects your personal
               information when you use our online dating Platform. We are
               operated by <strong>{OWNER_NAME}</strong>, located at
               <strong>{ADDRESS}</strong>.
@@ -54,8 +53,7 @@ export default function Privacy() {
 
             <h2 className="text-xl font-bold mt-8 mb-4 text-white">3. Payment Processing</h2>
             <p className="mb-6">
-              All payments are processed securely by Razorpay. {BRAND_NAME}
-              does not collect or store your full credit or debit card
+              All payments are processed securely by Razorpay. {BRAND_NAME} does not collect or store your full credit or debit card
               numbers. Razorpay is a PCI DSS-compliant payment gateway and
               handles all sensitive payment data in accordance with its own
               privacy policy and applicable security standards.

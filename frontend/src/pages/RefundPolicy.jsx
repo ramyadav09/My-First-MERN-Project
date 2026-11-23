@@ -1,7 +1,7 @@
 import Footer from "../components/layout/Footer";
 
 const BRAND_NAME = "Dev Tinder";
-const SUPPORT_EMAIL = "rkramyadav2060@gmail.com";
+const SUPPORT_EMAIL = "rkramyadav2063@gmail.com";
 const ADDRESS = "Bhubaneshwar, Odisha, India";
 
 export default function RefundPolicy() {
@@ -54,8 +54,7 @@ export default function RefundPolicy() {
             <h2 className="text-xl font-bold mt-8 mb-4 text-white">4. Refund Process</h2>
             <p className="mb-6">
               Approved refunds are processed back to the original payment
-              method used for the transaction. Refunds typically take
-              <strong>5 to 7 working days</strong> to appear in your account,
+              method used for the transaction.               Refunds typically take <strong>5 to 7 working days</strong> to appear in your account,
               depending on your bank or payment provider.
             </p>
 

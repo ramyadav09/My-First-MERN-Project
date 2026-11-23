@@ -3,7 +3,7 @@ import Footer from "../components/layout/Footer";
 
 const BRAND_NAME = "Dev Tinder";
 const OWNER_NAME = "Ram Kumar Yadav";
-const SUPPORT_EMAIL = "rkramyadav2060@gmail.com";
+const SUPPORT_EMAIL = "rkramyadav2063@gmail.com";
 const SUPPORT_PHONE = "+91-9234600646";
 const ADDRESS = "Bhubaneshwar, Odisha, India";
 
