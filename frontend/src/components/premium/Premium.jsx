@@ -75,7 +75,7 @@ export default function Premium() {
         { withCredentials: true },
       );
       console.log(order.data);
-      const { amount, currency, key_id, id: order_id, firstName, lastName, email } = order.data;
+      const { amount, currency, key_id, orderId: order_id, firstName, lastName, email } = order.data;
       const options = {
         key: key_id, // Replace with your Razorpay key_id
         amount: amount, // Amount is in currency subunits.

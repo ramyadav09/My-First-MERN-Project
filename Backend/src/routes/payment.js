@@ -44,6 +44,7 @@ paymentRouter.post("/create-payment", userAuth, async (req, res) => {
     const savedPayment = await payment.save();
     res.json({
       ...savedPayment.toJSON(),
+      order_id: order.id,
       key_id: process.env.RAZORPAY_KEY_ID || "rzp_test_U3JtJnlOQuNt64",
       firstName,
       lastName,
