@@ -50,7 +50,43 @@ export default function Terms() {
               content, or impersonate another person.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4 text-white">4. Payments via Razorpay</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4 text-white">4. Age Requirement</h2>
+            <p className="mb-6">
+              {BRAND_NAME} is strictly for users aged <strong>18 years and
+              older</strong>. By creating an account, you confirm that you are
+              at least 18 years of age. Accounts found to belong to users
+              under 18 will be suspended or terminated immediately without
+              notice.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4 text-white">5. User Conduct and Content Moderation</h2>
+            <p className="mb-6">
+              You agree to use the Platform responsibly and respectfully. We
+              prohibit harassment, hate speech, bullying, fake profiles, and
+              any behavior that makes other users feel unsafe. {BRAND_NAME}
+              reserves the right to review, moderate, and remove any profile,
+              photo, or message that violates these standards. Repeated
+              violations may result in permanent account suspension.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4 text-white">6. Prohibited Content and Services</h2>
+            <p className="mb-6">
+              {BRAND_NAME} is a social dating and matchmaking platform. The
+              following are strictly prohibited:
+            </p>
+            <ul className="list-disc list-inside mb-6 space-y-2 text-white/80">
+              <li>Adult or sexually explicit content, photos, or messages</li>
+              <li>Escort services, prostitution, or solicitation of paid sexual services</li>
+              <li>Human trafficking or any illegal activity</li>
+              <li>Scams, fraud, or financial exploitation of other users</li>
+            </ul>
+            <p className="mb-6">
+              Any user found engaging in prohibited activities will be
+              permanently banned and may be reported to the relevant
+              authorities.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4 text-white">7. Payments via Razorpay</h2>
             <p className="mb-6">
               All premium subscription payments are processed securely through
               Razorpay, a PCI DSS-compliant payment gateway. By making a
@@ -59,7 +95,7 @@ export default function Terms() {
               card details; all payment data is handled directly by Razorpay.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4 text-white">5. Limitation of Liability</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4 text-white">8. Limitation of Liability</h2>
             <p className="mb-6">
               The Platform and all content are provided "as is" without
               warranties of any kind. {BRAND_NAME} and {OWNER_NAME} are not
@@ -69,7 +105,7 @@ export default function Terms() {
               the service.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4 text-white">6. Governing Law</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4 text-white">9. Governing Law</h2>
             <p className="mb-6">
               These Terms are governed by and construed in accordance with the
               laws of India. Any disputes arising under these Terms shall be
@@ -77,14 +113,14 @@ export default function Terms() {
               {ADDRESS}.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4 text-white">7. Changes to Terms</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4 text-white">10. Changes to Terms</h2>
             <p className="mb-6">
               We may update these Terms from time to time. Continued use of
               the Platform after changes are posted constitutes acceptance of
               the revised Terms.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4 text-white">8. Contact</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4 text-white">11. Contact</h2>
             <p className="mb-0">
               If you have questions about these Terms, please contact us at
               rkramyadav2060@gmail.com.

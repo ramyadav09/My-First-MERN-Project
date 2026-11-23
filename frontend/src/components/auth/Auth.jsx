@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
+import Footer from "../layout/Footer";
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -12,6 +13,7 @@ const Auth = () => {
       ) : (
         <Signup setLogin={setIsLogin} />
       )}
+      <Footer />
     </>
   );
 };

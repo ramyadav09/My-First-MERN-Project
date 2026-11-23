@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { FiHeart, FiZap, FiAward, FiSend, FaClock, FaInfinity } from "react-icons/fi";
+import { FiZap, FiAward, FiSend } from "react-icons/fi";
+import { FaClock, FaInfinity } from "react-icons/fa";
 import Footer from "../components/layout/Footer";
 
 const BRAND_NAME = "Dev Tinder";
