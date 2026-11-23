@@ -10,11 +10,12 @@ const requestRouter = require("./routes/request");
 const userRouter = require("./routes/user");
 const initializeSocket = require("./utils/socket");
 const chatRouter = require("./routes/chat");
+const paymentRouter = require("./routes/payment");
 
 require("dotenv").config();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5173" || "http://localhost:8081",
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -30,7 +31,7 @@ app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", userRouter);
 app.use("/", chatRouter);
-
+app.use("/", paymentRouter);
 connectDB()
   .then(() => {
     console.log("Connected to MongoDB");
