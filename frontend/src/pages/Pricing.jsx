@@ -23,7 +23,7 @@ const plans = [
   {
     name: "Premium",
     icon: <FiAward size={28} className="text-yellow-400" />,
-    price: 300,
+    price: 200,
     interval: "/mo",
     features: [
       "Everything in Plus",
@@ -39,7 +39,7 @@ const plans = [
   {
     name: "Pro",
     icon: <FiSend size={28} className="text-pink-400" />,
-    price: 200,
+    price: 300,
     interval: "/mo",
     features: [
       "Everything in Premium",

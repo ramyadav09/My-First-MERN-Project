@@ -24,7 +24,7 @@ const plans = [
   {
     name: "Premium",
     icon: <FiAward size={26} className="text-yellow-400" />,
-    price: { monthly: 300, yearly: 2999 },
+    price: { monthly: 200, yearly: 1999 },
     color: "from-yellow-500/20 to-orange-700/20",
     border: "border-yellow-400/60",
     shadow: "shadow-[0_0_20px_rgba(234,179,8,0.25)]",
@@ -44,7 +44,7 @@ const plans = [
   {
     name: "Pro",
     icon: <FiSend size={26} className="text-pink-400" />,
-    price: { monthly: 200, yearly: 1999 },
+    price: { monthly: 300, yearly: 2999 },
     color: "from-pink-600/20 to-purple-900/20",
     border: "border-pink-500/40",
     shadow: "shadow-[0_0_20px_rgba(236,72,153,0.25)]",
