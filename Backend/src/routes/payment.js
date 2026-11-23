@@ -23,6 +23,7 @@ paymentRouter.post("/create-payment", userAuth, async (req, res) => {
       amount: amount * 100,
       receipt: `rcpt_${Date.now()}`,
       currency: "INR",
+      payment_capture: 1, // Auto-capture immediately after authorization
       notes: {
         // for your reference
         key1: firstName,
