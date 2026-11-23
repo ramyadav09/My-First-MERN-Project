@@ -10,6 +10,7 @@ import Request from "./components/connections/Request";
 import Messenger from "./components/messenger/Messenger";
 import Premium from "./components/premium/Premium";
 import NavbarPage from "./pages/Navbar";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
 function App() {
   return (
     <>
@@ -17,20 +18,21 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Body />}>
-              <Route path="/" element={<Feed />} />
+              <Route index element={<Feed />} />
+              <Route path="/navbar" element={<NavbarPage />} />
+              <Route path="/login" element={<Auth />} />
+            </Route>
+            <Route element={<ProtectedRoute />}>
               <Route path="/profile" element={<Profile />} />
               <Route path="/edit" element={<EditProfile />} />
               <Route path="/requests" element={<Request />} />
               <Route path="/messages" element={<Messenger />} />
               <Route path="/messages/:targetUserId" element={<Messenger />} />
               <Route path="/premium" element={<Premium />} />
-              <Route path="/navbar" element={<NavbarPage />} />
-              <Route path="/login" element={<Auth />} />
             </Route>
           </Routes>
         </BrowserRouter>
       </Provider>
-      ;
     </>
   );
 }
