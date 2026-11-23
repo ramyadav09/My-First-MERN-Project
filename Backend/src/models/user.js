@@ -63,10 +63,21 @@ const userSchema = new Schema(
       type: [String],
       maxlength: 100,
     },
+    isPremium: {
+      type: Boolean,
+      default: false,
+    },
+    membershipType: {
+      type: String,
+      enum: ["plus", "pro", "premium"],
+    },
+    membershipExpiry: {
+      type: Date,
+    },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 userSchema.methods.getJWT = async function () {

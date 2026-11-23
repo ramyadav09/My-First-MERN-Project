@@ -3,7 +3,12 @@ const { userAuth } = require("../middleware/auth");
 const paymentRouter = express.Router();
 const rzpInstance = require("../utils/razorpay");
 const Payment = require("../models/payment");
+const User = require("../models/user");
 const { membershipAmounts } = require("../utils/constant");
+/* NODE SDK: https://github.com/razorpay/razorpay-node */
+const {
+  validateWebhookSignature,
+} = require("razorpay/dist/utils/razorpay-utils");
 
 paymentRouter.post("/create-payment", userAuth, async (req, res) => {
   try {
@@ -43,6 +48,47 @@ paymentRouter.post("/create-payment", userAuth, async (req, res) => {
       lastName,
       email,
     });
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+paymentRouter.post("/payment-webhook", async (req, res) => {
+  try {
+    const isvalidateWebhookSignature = validateWebhookSignature(
+      JSON.stringify(req.body),
+      req.headers["x-razorpay-signature"],
+      process.env.WEEBHOOK_SECRET,
+    );
+    if (!isvalidateWebhookSignature) {
+      return res.status(400).send("Invalid signature");
+    }
+
+    //update payment status in database
+    const payment = await Payment.findOne({
+      orderId: req.body.payload.payment.entity.order_id,
+    });
+    if (!payment) {
+      return res.status(404).send("Payment not found");
+    }
+    payment.status = req.body.payload.payment.entity.status;
+    await payment.save();
+
+    //update premium status in user model
+    const user = await User.findById(payment.userId);
+
+    if (req.body.event === "payment.captured") {
+      user.isPremium = true;
+      user.membershipType = payment.notes.membershipType;
+      user.membershipExpiry = new Date() + 30 * 24 * 60 * 60 * 1000; // Set membership expiry to 30 days from now
+      await user.save();
+    }
+    if (req.body.event === "payment.failed") {
+      user.isPremium = false;
+      await user.save();
+    }
+
+    return res.status(200).json({ msg: "Webhook processed successfully" });
   } catch (err) {
     res.status(400).send(err.message);
   }
